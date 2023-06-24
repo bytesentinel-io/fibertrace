@@ -1,3 +1,5 @@
+// Part of ByteSentinel.io
+
 package fibertrace
 
 import (
