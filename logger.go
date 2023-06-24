@@ -1,4 +1,4 @@
-// Part of ByteSentinel.io
+// Part of ByteSentinel.io - https://bytesentinel.io
 
 package fibertrace
 
