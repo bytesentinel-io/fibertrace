@@ -63,6 +63,11 @@ func (l *Logger) Debug(message string) {
 	l.log("DEBUG", message)
 }
 
+func (l *Logger) Errorf(message string) {
+	l.log("ERROR", message)
+	os.Exit(1)
+}
+
 func (l *Logger) log(level, message string) {
 	_, file, _, _ := runtime.Caller(2)
 	module := filepath.Base(file)
@@ -134,10 +139,6 @@ func openLogFile(logFilePath string) (*os.File, error) {
 		return nil, err
 	}
 	return os.OpenFile(absPath, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0644)
-}
-
-func formatLogText(timestamp, level, application, module, user, message string) string {
-	return fmt.Sprintf("[%s] [%s] [%s] [%s] [%s]: %s", timestamp, level, application, module, user, message)
 }
 
 func userLookup() (string, error) {
