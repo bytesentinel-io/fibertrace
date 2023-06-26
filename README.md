@@ -7,9 +7,9 @@
 </h1>
 
 <div align="center">
-    <img src="https://img.shields.io/github/downloads/bytesentinel-io/REPO/total?style=for-the-badge" />
-    <img src="https://img.shields.io/github/last-commit/bytesentinel-io/REPO?color=%231BCBF2&style=for-the-badge" />
-    <img src="https://img.shields.io/github/issues/bytesentinel-io/REPO?style=for-the-badge" />
+    <img src="https://img.shields.io/github/downloads/bytesentinel-io/fibertrace/total?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/bytesentinel-io/fibertrace?color=%231BCBF2&style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues/bytesentinel-io/fibertrace?style=for-the-badge" />
 </div>
 
 <br />
@@ -23,18 +23,19 @@ FiberTrace is a logging package for Go applications. It provides a flexible and 
 To use FiberTrace in your Go project, you need to import the package:
 
 ```shell
-import "github.com/bbenouarets/bytesentinel/fibertrace"
+import "github.com/bytesentinel-io/fibertrace"
 ```
 
 Then, run the following command to fetch the package:
 
 ```shell
-go get -u github.com/bbenouarets/bytesentinel/fibertrace
+go get -u github.com/bytesentinel-io/fibertrace
 ```
 
 # Usage
 
 ## Creating a Logger
+
 To create a logger instance, use the NewLogger function:
 
 ```go
@@ -49,6 +50,7 @@ if err != nil {
 - `jsonFormat` _(bool)_: Set it to true to log in JSON format, or false to log in text format.
 
 ## Logging Messages
+
 The logger provides three logging methods: `Info`, `Error`, and `Debug`. Use them to log messages of different levels:
 
 ```go
