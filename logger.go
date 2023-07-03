@@ -107,14 +107,14 @@ func (l *Logger) logJSON(logEntry LogEntry) {
 
 func (l *Logger) logText(logEntry LogEntry) {
 	timestamp := logEntry.Timestamp.Format("2006/01/02 15:04:05")
-	logText := fmt.Sprintf("%s %s [%s] (%s:%s): %s", timestamp, logEntry.User, l.application, logEntry.Level, logEntry.Module, logEntry.Message)
+	logText := fmt.Sprintf("%s %s [%s] (%s:%s): %s", timestamp, logEntry.User, logEntry.Level, l.application, logEntry.Module, logEntry.Message)
 
 	l.writeToFile([]byte(logText))
 }
 
 func (l *Logger) console(logEntry LogEntry) {
 	timestamp := logEntry.Timestamp.Format("2006/01/02 15:04:05")
-	logText := fmt.Sprintf("%s %s [%s] (%s:%s): %s", timestamp, logEntry.User, l.application, logEntry.Level, logEntry.Module, logEntry.Message)
+	logText := fmt.Sprintf("%s %s [%s] (%s:%s): %s", timestamp, logEntry.User, logEntry.Level, l.application, logEntry.Module, logEntry.Message)
 
 	fmt.Println(logText)
 }
